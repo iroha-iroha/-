@@ -229,5 +229,48 @@
             }
         });
     </script>
+    <div id="howToUseModal" class="modal">
+        <div class="modal-content">
+            <h4>使い方</h4>
+            <p>このアプリケーションでは、タスクを追加することで、負荷がどれくらいかかっているかを視覚化します。タスクに負荷（1〜5）を設定して、進捗バーがどのように変化するかを確認しましょう！</p>
+        </div>
+        <div class="modal-footer">
+            <button class="modal-close btn-flat">閉じる</button>
+        </div>
+    </div>
+    
+    <div id="loadExamplesModal" class="modal">
+        <div class="modal-content">
+            <h4>負荷の例</h4>
+            <p>負荷の例を以下に示します：</p>
+            <ul>
+                <li>軽いタスク（1）：簡単なメール返信</li>
+                <li>中程度のタスク（3）：レポート作成</li>
+                <li>重いタスク（5）：重要なプレゼンの準備</li>
+            </ul>
+        </div>
+        <div class="modal-footer">
+            <button class="modal-close btn-flat">閉じる</button>
+        </div>
+    </div>
+    
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // モーダルの初期化
+        const howToUseModal = document.getElementById("howToUseModal");
+        const loadExamplesModal = document.getElementById("loadExamplesModal");
+        const howToUseModalInstance = M.Modal.init(howToUseModal);
+        const loadExamplesModalInstance = M.Modal.init(loadExamplesModal);
+    
+        // ボタンのイベントリスナー
+        document.getElementById("openHowToUse").addEventListener("click", () => {
+            howToUseModalInstance.open();
+        });
+    
+        document.getElementById("openLoadExamples").addEventListener("click", () => {
+            loadExamplesModalInstance.open();
+        });
+    });
+    </script>
 </body>
 </html>
