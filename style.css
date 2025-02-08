@@ -1,0 +1,84 @@
+/* styles.css */
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.progress {
+    margin: 20px 0;
+    height: 50px; /* 高さを50pxに設定 */
+    border-radius: 25px; /* 丸みを追加 */
+    overflow: hidden;
+}
+
+.progress .determinate {
+    height: 100%; /* プログレスバー全体の高さを適用 */
+    transition: width 0.3s ease; /* スムーズなアニメーション */
+}
+
+#turtleContainer {
+    position: relative;
+    display: inline-block;
+}
+
+#loadContainer {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.load-icon {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+}
+
+.collection {
+    margin-top: 20px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: grey;
+}
+
+/* モーダルデザイン */
+.modal-content {
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.modal-footer {
+    padding: 16px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.modal-content h4 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+.modal-content p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.modal-footer .btn {
+    font-size: 1rem;
+    padding: 0 16px;
+    border-radius: 4px;
+}
+
+/* 亀のコメントスタイル */
+#turtleComment {
+    margin-top: 15px;
+}
